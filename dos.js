@@ -33,7 +33,7 @@ function mostrar() {
 
 
 
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < 500; i++) {
 
         nombre = prompt("Ingrese nombre: ");
         while (!(isNaN(nombre))) {
