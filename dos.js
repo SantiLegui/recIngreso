@@ -26,7 +26,7 @@ function mostrar() {
     let nombreAlumnaJoven;
     let edadAlumnaJoven;
     let flagAlumnaJoven = 1;
-    let edadMasMaterias;
+    lexCantidadDeMateriasMaterias;
     let nombreMaxCantidadDeMaterias;
     let maxCantidadDeMaterias;
     let flagMaxCantidadDeMaterias = 1;
@@ -37,87 +37,56 @@ function mostrar() {
 
         nombre = prompt("Ingrese nombre: ");
         while (!(isNaN(nombre))) {
-
-
             nombre = prompt("Error. Ingrese nombre: ");
-
         }
 
         carrera = prompt("Ingrese carrera (quimica, fisica o sistemas) : ").toLowerCase();
         while (carrera != "quimica" && carrera != "fisica" && carrera != "sistemas") {
-
             carrera = prompt("Error, ingrese carrera (quimica, fisica o sistemas) : ").toLowerCase();
-
         }
 
         sexo = prompt("Ingrese sexo (masculino, femenino o no binario) : ");
         while (sexo != "masculino" && sexo != "femenino" && sexo != "no binario") {
-
             sexo = prompt("Error, ingrese sexo (masculino, femenino o no binario) : ");
-
-
         }
 
         cantidadMaterias = parseInt(prompt("Ingrese cantidad de materias (entre 1 y 5)"));
         while (cantidadMaterias < 1 || cantidadMaterias > 5 || isNaN(cantidadMaterias)) {
-
             cantidadMaterias = parseInt(prompt("Error, ingrese cantidad de materias (entre 1 y 5)"));
-
-
         }
 
         nota = parseInt(prompt("Ingrese nota (entre 0 y 10)"));
         while (nota < 0 || nota > 10 || isNaN(nota)) {
-
             nota = parseInt(prompt("Error, ingrese nota (entre 0 y 10)"));
-
         }
 
 
 
         edad = parseInt(prompt("Ingrese edad: "));
         while (isNaN(edad) || edad <= 17) {
-
             edad = parseInt(prompt("Error, Ingrese edad: "));
-
         }
 
-
-
         if (carrera == "fisica") {
-
             if (flagPromedioFisica || nota > mejorPromedioFisica) {
-
                 mejorPromedioFisica = nota;
                 nombreMejorPromedioFisica = nombre;
                 flagPromedioFisica = 0;
-
             }
         }
-
-
-
-
         if (sexo == "femenino") {
-
             if (flagAlumnaJoven || edad < edadAlumnaJoven) {
-
                 edadAlumnaJoven = edad;
                 nombreAlumnaJoven = nombre;
                 flagAlumnaJoven = 0;
 
             }
         }
-
-
-
         if (carrera != "quimica") {
-
             if (flagMaxCantidadDeMaterias || cantidadMaterias > maxCantidadDeMaterias) {
-
                 maxCantidadDeMaterias = cantidadMaterias;
                 nombreMaxCantidadDeMaterias = nombre;
-                edadMasMaterias = edad;
+                edadMaxCantidadDeMaterias = edad;
                 flagMaxCantidadDeMaterias = 0;
 
             }
@@ -143,7 +112,7 @@ function mostrar() {
         console.log("Sólo se ingresaron alumnos que cursan química")
     }
     else {
-        console.log("La edad y nombre del estudiante que cursa mas materias es: " + edadMasMaterias + " y " + nombreMaxCantidadDeMaterias + " con una cantidad de materias de " + maxCantidadDeMaterias);
+        console.log("La edad y nombre del estudiante que cursa mas materias es: " + edadMaxCantidadDeMaterias + " y " + nombreMaxCantidadDeMaterias + " con una cantidad de materias de " + maxCantidadDeMaterias);
     }
 
 
