@@ -91,7 +91,7 @@ function mostrar() {
 	if (contArg != 0) {
 		promArg = acumArg / contArg
 	}
-	if (contIlluminatis != 0) {
+	if (contIlluminatis != 0){
 		promIlluminatis = acumIlluminatis / contIlluminatis
 	}
 
