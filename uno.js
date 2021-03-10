@@ -101,25 +101,14 @@ function mostrar() {
 		if (contQa != 0) {
 			promQa = acumQa / contQa
 		}
-
-
-
-
-
-
-
-
-
-
-
 		seguir = prompt("Desea seguir ingresando datos?:");
 	} while (seguir == "s");
 
-console.log("El promedio de sueldo de los Programadores es de " + promProgramador)
-console.log("El promedio de sueldo de los Analistas es de " + promAnalista)
-console.log("El promedio de sueldo de los Qa es de " + promQa)
+	console.log("El promedio de sueldo de los Programadores es de " + promProgramador)
+	console.log("El promedio de sueldo de los Analistas es de " + promAnalista)
+	console.log("El promedio de sueldo de los Qa es de " + promQa)
 
-console.log("El sexo que tiene el mayor sueldo es el " + sueldoMax)
+	console.log("El sexo que tiene el mayor sueldo es el " + sueldoMax)
 	console.log("La mujer con mas sueldo se llama " + nombreFemMaxSueldo)
 	console.log("La cantidad de programadores no binarios con un sueldo entre 20000 y 55000 es de " + programNoBin)
 
